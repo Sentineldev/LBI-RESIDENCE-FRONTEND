@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/auth/login.css')}}">
+
+
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+</head>
+<body>
+
+    <div class="box">
+        <div class="form-box">
+            <div class="header-box">
+                <header>Bella Italia</header>
+                <p>Ingresar</p>
+            </div>
+            <div id="message-container" class="message-container">
+                <div class="message-box">
+                    <p id="message" class="message"></p>
+                </div>
+            </div>
+            <div id="loader-spinner" class="loader-container">
+                <span class="loader"></span>
+            </div>
+            <form id="login-form" class="form-container" action="{{url_for('auth.login')}}" method="post">
+                <div class="input-container">
+                    
+                    <div class="input-with-icon">
+                        <div class="input-icon-container">
+                            <img src="{{url_for('static',filename="images/auth/user-solid.svg")}}" width="24" height="24" alt="">
+                        </div>
+                        <div class="input-box">
+                            <input maxlength="32" type="text" name="username" id="username" class="input" placeholder="Usuario">
+                        </div>
+                    </div>
+                </div>
+                <div class="input-container">
+                    <div class="input-with-icon">
+                        <div class="input-icon-container">
+                            <img src="{{url_for('static',filename="images/auth/lock-solid.svg")}}" width="24" height="24" alt="">
+                        </div>
+                        <div class="input-box">
+                            <input maxlength="100" type="password" name="password" id="password" class="input" placeholder="Contraseña">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="input-container" style="border:none;">
+                    <button class="button" type="submit">Ingresar</button>
+                </div>
+            </form>
+        </div>
+        <div style="flex:1;"></div>
+        <img src="{{url_for('static',filename="images/auth/wave.svg")}}" alt="">
+
+    </div>
+    
+    
+</body>
+<script src="{{url_for('static',filename="js/auth/login.js")}}"></script>
+</html>

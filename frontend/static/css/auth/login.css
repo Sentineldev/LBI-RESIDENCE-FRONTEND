@@ -1,0 +1,105 @@
+
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    padding-top: 1rem;
+}
+.form-box{
+    width: 45rem;
+    /* background-color: rgb(101, 74, 221); */
+    border-radius: 0.4rem;
+    box-shadow: 0px 2px 2px #aaaa,0px 2px 2px #aaaa;
+    background-color: white;
+    align-self: center;
+    justify-self: center;
+}
+
+.header-box{
+    background-color: rgb(101, 74, 221);
+    padding: 1rem 1.6rem;
+    color: white;
+
+    font-weight: bold;
+    border-top-left-radius: 0.4rem;
+    border-top-right-radius: 0.4rem;
+}
+.header-box header{
+    font-size: 2.8rem;
+}
+.header-box p{
+    font-size: 1.6rem;
+}
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 2rem 1.6rem;
+    margin-top: 2rem;
+}
+.input-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid #aaaa;
+    border-radius: 0.3rem;
+}
+
+.input-with-icon{
+    display: flex;
+    align-items: center;
+    border-radius: 0.2rem;
+}
+.input-icon-container{
+    border-right: 2px solid #aaaa;
+    display: flex;
+    padding: 0.7rem;
+}
+.input-box{
+    padding: 0.9rem;
+    flex: 1;
+    
+}
+
+.input{
+    font-size: 1.6rem;
+    outline: none;
+    border: none;
+    border-radius: 0.3rem;
+    transition: 0.2s ease-in;
+    width: 100%;
+}
+
+
+.form-label{
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: rgb(64, 73, 83);
+}
+.button{
+    padding: 0.8rem;
+    border: none;
+    border-radius: 0.2rem;
+    background-color: rgb(101, 74, 221);
+    box-shadow: 0px 0px 2px rgb(101, 74, 221),
+    0px 0px 2px rgb(228, 156, 3) ;
+    color: white;
+    font-size: 1.6rem;
+    cursor: pointer;
+    margin-top: 2rem;
+    transition: 0.2s ease-in;
+    opacity: 1;
+}
+.button:hover{
+    opacity: 0.9;
+
+}
+
+@media(max-width:768px){
+    
+    .form-box{
+        width: 40rem;
+    }
+}

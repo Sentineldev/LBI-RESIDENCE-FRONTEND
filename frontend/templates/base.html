@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    {% block head %}{% endblock %}
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+
+    <link rel="stylesheet" href="{{url_for('static',filename='css/navbar.css')}}">
+</head>
+<body>
+    <div class="main">
+        <div class="nav-container">
+            <div id="nav-background" class="nav-background"></div>
+            <button id="open-nav">
+                <img src="{{url_for('static',filename='images/navbar/bars-solid.svg')}}" width="24" height="24">
+            </button>
+            <nav id="nav" class="navbar">
+                <div class="navbar-header-container">
+                    <header class="navbar-header">
+                        <img src="{{url_for('static',filename='images/navbar/house-solid.svg')}}" class="nav-icon"  alt="logo">
+                        <span>Bella Italia</span>
+                    </header>
+                </div>
+                <div class="navbar-body">
+                    <ul class="navbar-list">
+                        <li>
+                            <a href="#" class="navbar-link">
+                                <img src="{{url_for('static',filename='images/navbar/table-solid.svg')}}" class="nav-icon"  alt="money-logo">
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="navbar-link">
+                                <img src="{{url_for('static',filename='images/navbar/sack-dollar-solid.svg')}}" class="nav-icon"  alt="money-logo">
+                                <span>Gastos</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="navbar-link">
+                                <img src="{{url_for('static',filename='images/navbar/building-solid.svg')}}" class="nav-icon"  alt="money-logo">
+                                <span>Apartamentos</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navbar-footer">
+                    <ul class="navbar-list">
+                        <li>
+                            <a id="logout" href="{{url_for("auth.logout")}}" class="navbar-link">
+                                <img src="{{url_for('static',filename='images/navbar/right-from-bracket-solid.svg')}}" class="nav-icon"  alt="money-logo">
+                                <span>Salir</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>    
+        {% block content %}
+    
+        {% endblock %}
+    </div>
+    
+    
+</body>
+<script src="{{url_for('static',filename='js/navbar.js')}}"></script>
+{% block script %}
+{% endblock %}
+</html>
